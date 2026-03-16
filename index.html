@@ -89,13 +89,41 @@
         }
 
         .discipline-bar {
-            border-right: 2px solid #1B46BC;
-            padding-right: 12px;
-            margin-right: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 9999px;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: default;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .discipline-bar:last-child {
-            border-right: none;
+        .discipline-bar svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .discipline-bar:hover svg {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .discipline-bar:hover {
+            background: #FACC15;
+            color: #1B46BC;
+            border-color: #FACC15;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
         }
 
         .card-header-tab {
@@ -285,6 +313,9 @@
                         <div class="bg-white p-2 rounded-2xl">
                             <img src="image/accurate-logo.webp" alt="Accurate Logo" class="w-auto h-16 ">
                         </div>
+                        <div class="bg-white p-2 rounded-2xl">
+                            <img src="image/accreditations/Blog-Image.jpeg" alt="Accreditation Logo" class="w-auto h-16">
+                        </div>
                         <!-- <div>
                         <h3
                         class="nav-text font-bookman font-extrabold text-xl md:text-2xl lg:text-xl xl:text-4xl 2xl:text-5xl font-black uppercase tracking-tight text-white leading-none">
@@ -300,20 +331,35 @@
 
                     <!-- Large Text -->
                     <div class="">
-                        <!-- <h1 class="font-extrabold text-white ug-pg-text drop-shadow-2xl mb-5">
-                            <span class="text-[60px] md:text-[120px] lg:text-[110px]">PROGRAMS</span>
-                        </h1> -->
+                        <h1 class="font-extrabold text-white ug-pg-text drop-shadow-2xl mb-5">
+                            <span class="text-[60px] md:text-[120px] lg:text-[110px]">UG <span class="text-accurate-yellow">&</span> PG</span>
+                        </h1>
 
 
                         <!-- Disciplines -->
                         <div
-                            class="flex flex-wrap text-white font-bold text-sm md:text-lg tracking-tight leading-relaxed max-w-2xl uppercase mb-5">
-                            <span class="discipline-bar !border-white">Engineering</span>
-                            <span class="discipline-bar !border-white">Management</span>
-                            <span class="discipline-bar !border-white">Computer Applications</span>
-                            <span class="discipline-bar !border-white">Pharmacy</span>
-                            <!-- <span class="discipline-bar !border-white">Architecture</span> -->
-                            <span class="discipline-bar !border-white">Law</span>
+                            class="flex flex-wrap gap-3 text-white font-bold tracking-tight leading-relaxed max-w-2xl uppercase mb-8">
+                            <span class="discipline-bar">
+                                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                Engineering
+                            </span>
+                            <span class="discipline-bar">
+                                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                Management
+                            </span>
+                            <span class="discipline-bar">
+                                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                Computer Applications
+                            </span>
+                            <span class="discipline-bar">
+                                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                Pharmacy
+                            </span>
+                            <!-- <span class="discipline-bar">Architecture</span> -->
+                            <span class="discipline-bar">
+                                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                Law
+                            </span>
                         </div>
                         <h2
                             class="text-3xl md:text-4xl lg:text-5xl font-bold text-accurate-yellow mt-2 mb-8 text-shadow-strong">
@@ -376,105 +422,24 @@
         </div>
     </main>
 
-    <!-- Why Accurate Institute Section -->
-    <section class="bg-white w-full shadow-2xl rounded-sm overflow-hidden z-10 relative">
-        <!-- Top Announcement Bar -->
-        <!-- <div class="max-w-7xl mx-auto px-4 py-8 md:py-12"
-            class="bg-white py-2 px-4 text-xs md:text-sm flex justify-between items-center overflow-hidden w-full z-20 border-b border-gray-100">
-            <div class="flex items-center flex-1 overflow-hidden pr-4">
-                <span class="text-accurate-blue font-bold uppercase shrink-0 z-10 bg-white pr-2">Announcement</span>
-                <marquee class="text-gray-800 font-medium flex-1" scrollamount="5"> â€¢ Dear Student, Join our LIVE
-                    Webinar on Effective Communication scheduled on 16th February at 6:00 PM to 7:00 PM. Enhance your
-                    presentation and interview skills with expert guidance. <span
-                        class="text-gray-800 font-medium flex-1" scrollamount="5"> M.Tech Admissions Open 2026.</span>
-                </marquee>
-
-                <a href="#" `
-                    class="bg-accurate-yellow text-accurate-blue font-bold px-4 py-3 rounded text-xs hover:bg-yellow-500 transition shrink-0 z-10">Apply
-                    Now</a>
+   
+<!-- Accreditations & Recognitions Section -->
+    <section class="w-full bg-white py-12 border-t border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-400 uppercase tracking-widest">Recognitions &
+                    Accreditations</h2>
             </div>
-
-        </div> -->
-
-        <div class="max-w-7xl mx-auto px-4 py-8 md:py-12">
-            <h2 class="text-2xl md:text-4xl font-extrabold text-accurate-blue text-center uppercase mb-8 md:mb-10">
-                Placement at a Glance</h2>
-
             <div
-                class="flex flex-wrap justify-center items-stretch divide-y md:divide-y-0 md:divide-x divide-gray-300 ">
-                <!-- Stat 1 -->
-                <div
-                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
-                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight">1.30</div>
-                    <div class="text-xl md:text-2xl font-extrabold text-accurate-dark-blue leading-tight mb-2">CR. PA
-                    </div>
-                    <div class="text-[13px] md:text-sm text-gray-500 font-medium text-center mb-1">Highest International
-                        Package</div>
-                    <div
-                        class="text-[16px] md:text-sm text-gray-500 font-medium text-center font-bold text-accurate-blue">
-                        <mark class="bg-accurate-yellow text-accurate-dark-blue px-2 py-0.5 rounded">SAAS Group
-                            Dubai</mark>
-                    </div>
-                </div>
-
-
-                <!-- Stat 2 -->
-                <div
-                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
-                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight">17</div>
-                    <div class="text-xl md:text-2xl font-extrabold text-accurate-dark-blue leading-tight mb-2">Lakhs
-                        PA
-                    </div>
-                    <div class="text-[13px] md:text-sm text-gray-500 font-medium text-center">Highest Domestic
-                        Package</div>
-                </div>
-                <!-- Stat 5 -->
-                <div
-                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
-                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight">7</div>
-                    <div class="text-xl md:text-2xl font-extrabold text-accurate-dark-blue leading-tight mb-2">Lakhs
-                        PA
-                    </div>
-                    <div class="text-[13px] md:text-sm text-gray-500 font-medium text-center"> Average
-                        Package</div>
-                </div>
-
-                <!-- Stat 3 -->
-                <div
-                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
-                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight mb-2">550+
-                    </div>
-                    <div class="text-[13px] md:text-sm text-gray-500 font-medium leading-snug text-center">
-                        Recruiters</div>
-                </div>
-
-                <!-- Stat 4 -->
-                <div
-                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
-                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight mb-2">100%
-                    </div>
-                    <div class="text-[13px] md:text-sm text-gray-500 font-medium leading-snug text-center">
-                        Placement <br>
-                        Assurance</div>
-                </div>
-
-                <!-- Stat 5 -->
-                <div
-                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
-                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight mb-2">1200+
-                    </div>
-                    <div class="text-[13px] md:text-sm text-gray-500 font-medium leading-snug text-center">Companies
-                        for<br>Placement</div>
-                </div>
-
-                <!-- Stat 6 -->
-                <!-- <div
-                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
-                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight mb-2">10+
-                    </div>
-                    <div class="text-[13px] md:text-sm text-gray-500 font-medium leading-snug text-center">Days
-                        Global<br>Immersion Program<br>Across 5 Countries</div>
-                </div> -->
+                class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="image/accreditations/aicte-logo.webp" alt="AICTE"
+                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="image/accreditations/naac-logo.webp" alt="NAAC"
+                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="image/accreditations/iso.webp" alt="ISO"
+                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer">
+                <img src="image/accreditations/ccsu-logo.webp" alt="CCSU"
+                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer">
             </div>
         </div>
     </section>
@@ -884,7 +849,7 @@
                 </div>
 
 
-                <!-- Award 7 -->
+                <!-- Award 6 -->
                 <div
                     class="relative flex flex-col items-start p-6 border-b-2 border-accurate-blue/10 hover:border-accurate-blue transition-colors group h-full">
                     <h3 class="text-accurate-blue font-bold text-xl md:text-xl leading-tight mb-4 flex-grow">
@@ -898,7 +863,7 @@
                     </div>
                 </div>
 
-                <!-- Award 8 -->
+                <!-- Award 7 -->
                 <div
                     class="relative flex flex-col items-start p-6 border-b-2 border-accurate-blue/10 hover:border-accurate-blue transition-colors group h-full">
                     <h3 class="text-accurate-blue font-bold text-xl md:text-xl leading-tight mb-4 flex-grow">
@@ -912,7 +877,7 @@
                     </div>
                 </div>
 
-                <!-- Award 9 -->
+                <!-- Award 8 -->
                 <div
                     class="relative flex flex-col items-start p-6 border-b-2 border-accurate-blue/10 hover:border-accurate-blue transition-colors group h-full">
                     <h3 class="text-accurate-blue font-bold text-xl md:text-xl leading-tight mb-4 flex-grow">
@@ -926,7 +891,7 @@
                     </div>
                 </div>
 
-                <!-- Award 10 -->
+                <!-- Award 9 -->
                 <div
                     class="relative flex flex-col items-start p-6 border-b-2 border-accurate-blue/10 hover:border-accurate-blue transition-colors group h-full">
                     <h3 class="text-accurate-blue font-bold text-xl md:text-xl leading-tight mb-4 flex-grow">
@@ -940,7 +905,7 @@
                     </div>
                 </div>
 
-                <!-- Award 11 -->
+                <!-- Award 10 -->
                 <div
                     class="relative flex flex-col items-start p-6 border-b-2 border-accurate-blue/10 hover:border-accurate-blue transition-colors group h-full">
                     <h3 class="text-accurate-blue font-bold text-xl md:text-xl leading-tight mb-4 flex-grow">
@@ -954,7 +919,7 @@
                     </div>
                 </div>
 
-                <!-- Award 12 -->
+                <!-- Award 11 -->
                 <div
                     class="relative flex flex-col items-start p-6 border-b-2 border-accurate-blue/10 hover:border-accurate-blue transition-colors group h-full">
                     <h3 class="text-accurate-blue font-bold text-xl md:text-xl leading-tight mb-4 flex-grow">
@@ -967,13 +932,26 @@
                     </div>
                 </div>
 
+                <!-- Award 12 -->
+                <div
+                    class="relative flex flex-col items-start p-6 border-b-2 border-accurate-blue/10 hover:border-accurate-blue transition-colors group h-full">
+                    <h3 class="text-accurate-blue font-bold text-xl md:text-xl leading-tight mb-4 flex-grow">
+                        Excellence in Placements and Academic Research</h3>
+                    <div class="w-full mt-auto flex justify-between">
+                        <p class="text-[12px] font-bold text-gray-500 uppercase tracking-wider mb-3">Awarded By </p>
+                        <p class="text-[12px] font-bold text-accurate-blue uppercase tracking-wider mb-3">Education World</p>
+                    </div>
+                    <div class="w-16 h-0.5 bg-accurate-blue group-hover:w-full transition-all duration-300 opacity-30">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Awards & Recognitions Section (Light High Impact) -->
-    <section class=" md:max-h-[70vh] w-full py-16 md:py-15 bg-[#f7f7f7] relative overflow-hidden">
-        <!-- Subtle Pattern Overlay -->
+    <!-- <section class=" md:max-h-[70vh] w-full py-16 md:py-15 bg-[#f7f7f7] relative overflow-hidden">
+       
         <div class="absolute inset-0 opacity-20 pointer-events-none">
             <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <defs>
@@ -987,7 +965,7 @@
 
         <div class="max-w-5xl mx-auto px-4 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <!-- Award Card 1 -->
+              
                 <div
                     class="bg-white p-5 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-blue-50 group hover:scale-[1.01] h-[180px]">
 
@@ -998,7 +976,7 @@
                     <div class="w-20 h-1 bg-accurate-yellow mt-5 group-hover:w-full transition-all duration-700"></div>
                 </div>
 
-                <!-- Award Card 2 -->
+      
                 <div
                     class="bg-white p-5 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-blue-50 group hover:scale-[1.01] h-[180px]">
 
@@ -1009,7 +987,7 @@
                     <div class="w-20 h-1 bg-accurate-yellow mt-5 group-hover:w-full transition-all duration-700"></div>
                 </div>
 
-                <!-- Award Card 3 -->
+             
                 <div
                     class="bg-white p-5 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-blue-50 group hover:scale-[1.01] h-[180px]">
                     <p class="text-accurate-blue/60 font-bold text-sm uppercase tracking-[0.3em] mb-6">Awarded as</p>
@@ -1019,7 +997,7 @@
                     <div class="w-20 h-1 bg-accurate-yellow mt-5 group-hover:w-full transition-all duration-700"></div>
                 </div>
 
-                <!-- Award Card 4 -->
+             
                 <div
                     class="bg-white p-5 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-blue-50 group hover:scale-[1.01] h-[180px]">
                     <p class="text-accurate-blue/60 font-bold text-sm uppercase tracking-[0.3em] mb-6">Awarded as</p>
@@ -1030,7 +1008,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- State-of-the-Art Facilities Section -->
     <section class="w-full py-16 md:py-24 bg-white relative overflow-hidden">
@@ -1231,6 +1209,30 @@
                     </div>
                     <div
                         class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-rose-500 to-pink-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
+                    </div>
+                </div>
+
+                <!-- Card 7: Central Library -->
+                <div
+                    class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://www.accurate.in/img/infrastructure/library-1.webp" alt="Central Library"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="absolute top-4 left-4 bg-blue-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">
+                        Resources</div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black text-accurate-dark-blue mb-2">Central Library & Resource Center</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">A vast collection of 50,000+ books, digital journals, quiet study zones, and high-speed internet access for academic research.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-3 py-1 rounded-full">50K+ Books</span>
+                            <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-3 py-1 rounded-full">E-Journals</span>
+                            <span class="bg-blue-50 text-blue-700 text-[11px] font-bold px-3 py-1 rounded-full">Research</span>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left">
                     </div>
                 </div>
 
@@ -1606,6 +1608,124 @@
                     </div>
 
                 </div>
+
+                <!-- Duplicated Content for Seamless Loop -->
+                <div class="marquee-content group" aria-hidden="true">
+                    <!-- Photo 1 -->
+                    <div
+                        class="w-[280px] h-[320px] shrink-0 rounded-[1.5rem] overflow-hidden relative shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer hover:-translate-y-[10px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2)] hover:z-20 group/card">
+                        <img src="image/international-exposure/aimt-international-visit.webp"
+                            alt="AIMT International Visit"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover/card:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-white font-bold text-lg leading-tight mb-1">AIMT International Visit</h3>
+                            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold">Global Gateway
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Photo 2 -->
+                    <div
+                        class="w-[280px] h-[320px] shrink-0 rounded-[1.5rem] overflow-hidden relative shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer hover:-translate-y-[10px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2)] hover:z-20 group/card">
+                        <img src="image/international-exposure/aimt-singapore-visit.webp" alt="AIMT Singapore Visit"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover/card:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-white font-bold text-lg leading-tight mb-1">AIMT Singapore Visit</h3>
+                            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold">Singapore Immersion
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Photo 3 -->
+                    <div
+                        class="w-[280px] h-[320px] shrink-0 rounded-[1.5rem] overflow-hidden relative shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer hover:-translate-y-[10px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2)] hover:z-20 group/card">
+                        <img src="image/international-exposure/management-development-inst.webp" alt="MDIS"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover/card:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-white font-bold text-lg leading-tight mb-1">MDIS</h3>
+                            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold">Singapore Management
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Photo 4 -->
+                    <div
+                        class="w-[280px] h-[320px] shrink-0 rounded-[1.5rem] overflow-hidden relative shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer hover:-translate-y-[10px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2)] hover:z-20 group/card">
+                        <img src="image/international-exposure/nanyang-technological-unive.webp" alt="NTU Singapore"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover/card:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-white font-bold text-lg leading-tight mb-1">NTU Singapore</h3>
+                            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold">Singapore Immersion
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 -->
+                    <div
+                        class="w-[280px] h-[320px] shrink-0 rounded-[1.5rem] overflow-hidden relative shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer hover:-translate-y-[10px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2)] hover:z-20 group/card">
+                        <img src="image/international-exposure/sin-ming.webp" alt="Sin Ming"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover/card:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-white font-bold text-lg leading-tight mb-1">Sin Ming</h3>
+                            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold">Singapore</p>
+                        </div>
+                    </div>
+                    <!-- Photo 6 -->
+                    <div
+                        class="w-[280px] h-[320px] shrink-0 rounded-[1.5rem] overflow-hidden relative shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer hover:-translate-y-[10px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2)] hover:z-20 group/card">
+                        <img src="image/international-exposure/singapore-visit-accurate.webp"
+                            alt="Accurate Singapore Visit"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover/card:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-white font-bold text-lg leading-tight mb-1">Accurate Singapore Visit</h3>
+                            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold">Singapore Immersion
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Photo 7-->
+                    <div
+                        class="w-[280px] h-[320px] shrink-0 rounded-[1.5rem] overflow-hidden relative shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer hover:-translate-y-[10px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2)] hover:z-20 group/card">
+                        <img src="image/international-exposure/singapore-visit.webp" alt="Singapore Immersion"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover/card:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-white font-bold text-lg leading-tight mb-1">Singapore Visit</h3>
+                            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold">Global Experience
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Photo 8 -->
+                    <div
+                        class="w-[280px] h-[320px] shrink-0 rounded-[1.5rem] overflow-hidden relative shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer hover:-translate-y-[10px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2)] hover:z-20 group/card">
+                        <img src="image/international-exposure/university-of-auckland.webp" alt="University of Auckland"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover/card:opacity-90 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h3 class="text-white font-bold text-lg leading-tight mb-1">University of Auckland</h3>
+                            <p class="text-blue-200 text-xs uppercase tracking-wider font-semibold">New Zealand
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -1733,78 +1853,162 @@
         </div>
     </section>
 
-    <!-- Accreditations & Recognitions Section -->
-    <section class="w-full bg-white py-12 border-t border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-8">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-400 uppercase tracking-widest">Recognitions &
-                    Accreditations</h2>
-            </div>
-            <div
-                class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="image/accreditations/aicte-logo.webp" alt="AICTE"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer">
-                <img src="image/accreditations/naac-logo.webp" alt="NAAC"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer">
-                <img src="image/accreditations/iso.webp" alt="ISO"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer">
-                <img src="image/accreditations/ccsu-logo.webp" alt="CCSU"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer">
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Campus Infrastructure Section -->
-    <section class="bg-white w-full py-16 md:py-24">
+    <!-- <section class="bg-white w-full py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-2xl md:text-4xl font-extrabold text-accurate-blue uppercase mb-4">World Class
                     Infrastructure</h2>
-                <p class="text-gray-600 font-medium max-w-2xl mx-auto">Experience a campus designed for innovation,
-                    collaboration, and holistic growth.</p>
+                <p class="text-gray-600 font-medium max-w-2xl mx-auto">Experience a vibrant campus life with top-tier recreational, athletic, and residential facilities.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg h-80">
-                    <img src="image/advance-tech-lab.webp" alt="Advanced Labs"
+                    <img src="image/campus_cultural.png" alt="Mega Auditorium"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-accurate-blue/90 to-transparent flex flex-col justify-end p-8">
-                        <h3 class="text-white font-bold text-xl mb-2">Advanced Tech Labs</h3>
-                        <p class="text-white/80 text-sm">Industry-standard equipment for hands-on learning.</p>
+                        <h3 class="text-white font-bold text-xl mb-2">Mega Auditorium</h3>
+                        <p class="text-white/80 text-sm">State-of-the-art 500+ seating capacity hub for cultural events and seminars.</p>
                     </div>
                 </div>
+             
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg h-80">
-                    <img src="image/library.webp" alt="Digital Library"
+                    <img src="image/sport.webp" alt="Sports Arena"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-accurate-blue/90 to-transparent flex flex-col justify-end p-8">
-                        <h3 class="text-white font-bold text-xl mb-2">Modern Library</h3>
-                        <p class="text-white/80 text-sm">Extensive collection of digital and physical resources.</p>
+                        <h3 class="text-white font-bold text-xl mb-2">Sports & Fitness</h3>
+                        <p class="text-white/80 text-sm">Modern sports complex featuring multiple indoor and outdoor athletic courts.</p>
                     </div>
                 </div>
+        
                 <div class="group relative overflow-hidden rounded-2xl shadow-lg h-80">
-                    <img src="image/hostel.webp" alt="Hostel Facilities"
+                    <img src="image/hostel.webp" alt="Premium Housing"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-accurate-blue/90 to-transparent flex flex-col justify-end p-8">
                         <h3 class="text-white font-bold text-xl mb-2">Premium Housing</h3>
-                        <p class="text-white/80 text-sm">Safe and comfortable home away from home.</p>
+                        <p class="text-white/80 text-sm">Safe, comfortable, and Wi-Fi enabled residential facilities for students.</p>
                     </div>
                 </div>
             </div>
 
             <div class="mt-12 flex flex-wrap justify-center gap-4">
-                <span class="bg-gray-100 text-accurate-blue font-bold px-6 py-2 rounded-full text-sm">Wi-Fi
-                    Campus</span>
-                <span class="bg-gray-100 text-accurate-blue font-bold px-6 py-2 rounded-full text-sm">Sports
-                    Complex</span>
-                <span class="bg-gray-100 text-accurate-blue font-bold px-6 py-2 rounded-full text-sm">Auditorium</span>
-                <span class="bg-gray-100 text-accurate-blue font-bold px-6 py-2 rounded-full text-sm">Green
-                    Campus</span>
+                <span class="bg-gray-100 text-accurate-blue font-bold px-6 py-2 rounded-full text-sm">Smart Cafeteria</span>
+                <span class="bg-gray-100 text-accurate-blue font-bold px-6 py-2 rounded-full text-sm">Yoga & Gym</span>
+                <span class="bg-gray-100 text-accurate-blue font-bold px-6 py-2 rounded-full text-sm">24/7 Security</span>
+                <span class="bg-gray-100 text-accurate-blue font-bold px-6 py-2 rounded-full text-sm">Medical Hub</span>
+            </div>
+        </div>
+    </section> -->
+
+ <!-- Why Accurate Institute Section -->
+    <section class="bg-white w-full shadow-2xl rounded-sm overflow-hidden z-10 relative">
+        <!-- Top Announcement Bar -->
+        <!-- <div class="max-w-7xl mx-auto px-4 py-8 md:py-12"
+            class="bg-white py-2 px-4 text-xs md:text-sm flex justify-between items-center overflow-hidden w-full z-20 border-b border-gray-100">
+            <div class="flex items-center flex-1 overflow-hidden pr-4">
+                <span class="text-accurate-blue font-bold uppercase shrink-0 z-10 bg-white pr-2">Announcement</span>
+                <marquee class="text-gray-800 font-medium flex-1" scrollamount="5"> â€¢ Dear Student, Join our LIVE
+                    Webinar on Effective Communication scheduled on 16th February at 6:00 PM to 7:00 PM. Enhance your
+                    presentation and interview skills with expert guidance. <span
+                        class="text-gray-800 font-medium flex-1" scrollamount="5"> M.Tech Admissions Open 2026.</span>
+                </marquee>
+
+                <a href="#" `
+                    class="bg-accurate-yellow text-accurate-blue font-bold px-4 py-3 rounded text-xs hover:bg-yellow-500 transition shrink-0 z-10">Apply
+                    Now</a>
+            </div>
+
+        </div> -->
+
+        <div class="max-w-7xl mx-auto px-4 py-8 md:py-12">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-accurate-blue text-center uppercase mb-8 md:mb-10">
+                Placement at a Glance</h2>
+
+            <div
+                class="flex flex-wrap justify-center items-stretch divide-y md:divide-y-0 md:divide-x divide-gray-300 ">
+                <!-- Stat 1 -->
+                <div
+                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
+                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight">1.30</div>
+                    <div class="text-xl md:text-2xl font-extrabold text-accurate-dark-blue leading-tight mb-2">CR. PA
+                    </div>
+                    <div class="text-[13px] md:text-sm text-gray-500 font-medium text-center mb-1">Highest International
+                        Package</div>
+                    <div
+                        class="text-[16px] md:text-sm text-gray-500 font-medium text-center font-bold text-accurate-blue">
+                        <mark class="bg-accurate-yellow text-accurate-dark-blue px-2 py-0.5 rounded">SAAS Group
+                            Dubai</mark>
+                    </div>
+                </div>
+
+
+                <!-- Stat 2 -->
+                <div
+                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
+                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight">17</div>
+                    <div class="text-xl md:text-2xl font-extrabold text-accurate-dark-blue leading-tight mb-2">Lakhs
+                        PA
+                    </div>
+                    <div class="text-[13px] md:text-sm text-gray-500 font-medium text-center">Highest Domestic
+                        Package</div>
+                </div>
+                <!-- Stat 5 -->
+                <div
+                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
+                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight">7</div>
+                    <div class="text-xl md:text-2xl font-extrabold text-accurate-dark-blue leading-tight mb-2">Lakhs
+                        PA
+                    </div>
+                    <div class="text-[13px] md:text-sm text-gray-500 font-medium text-center"> Average
+                        Package</div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div
+                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
+                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight mb-2">550+
+                    </div>
+                    <div class="text-[13px] md:text-sm text-gray-500 font-medium leading-snug text-center">
+                        Recruiters</div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div
+                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
+                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight mb-2">100%
+                    </div>
+                    <div class="text-[13px] md:text-sm text-gray-500 font-medium leading-snug text-center">
+                        Placement <br>
+                        Assurance</div>
+                </div>
+
+                <!-- Stat 5 -->
+                <div
+                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
+                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight mb-2">1200+
+                    </div>
+                    <div class="text-[13px] md:text-sm text-gray-500 font-medium leading-snug text-center">Companies
+                        for<br>Placement</div>
+                </div>
+
+                <!-- Stat 6 -->
+                <!-- <div
+                    class="w-full md:w-auto px-2 md:px-6 py-4 md:py-0 flex flex-col items-center justify-start flex-1 min-w-[140px]">
+                    <div class="text-3xl md:text-4xl font-extrabold text-accurate-dark-blue tracking-tight mb-2">10+
+                    </div>
+                    <div class="text-[13px] md:text-sm text-gray-500 font-medium leading-snug text-center">Days
+                        Global<br>Immersion Program<br>Across 5 Countries</div>
+                </div> -->
             </div>
         </div>
     </section>
+
 
     <!-- BU Placements Section -->
     <section class="w-full bg-white pb-16 md:pb-24 pt-8">
@@ -1949,16 +2153,13 @@
                 </p>
             </div>
 
-            <div class="relative w-full overflow-hidden py-4 md:py-8 group" id="testimonial-container">
-                <div id="testimonial-track"
-                    class="flex w-full transition-transform duration-700 ease-in-out cursor-grab active:cursor-grabbing">
-                    <!-- TESTIMONIAL CARDS HTML INJECTION VIA JS -->
+            <div class="marquee-wrapper" id="testimonial-marquee">
+                <div id="testimonial-content-1" class="marquee-content group">
+                    <!-- Cards will be populated here via JS -->
                 </div>
-            </div>
-
-            <!-- Dots Pagination Navigation -->
-            <div id="testimonial-dots" class="flex justify-center gap-3 mt-4 md:mt-8 relative z-30">
-                <!-- Dots injected via JS -->
+                <div id="testimonial-content-2" class="marquee-content group" aria-hidden="true">
+                    <!-- Cards will be populated here via JS (Duplicate) -->
+                </div>
             </div>
         </div>
     </section>
@@ -2510,29 +2711,27 @@
             }
         ];
 
-        const testimonialTrack = document.getElementById('testimonial-track');
-        const testimonialDotsContainer = document.getElementById('testimonial-dots');
+        const testimonialContent1 = document.getElementById('testimonial-content-1');
+        const testimonialContent2 = document.getElementById('testimonial-content-2');
 
-        if (testimonialTrack && testimonialDotsContainer) {
-            // Duplicate data to act as an infinite track
-            const allTestimonials = [...testimonialData, ...testimonialData];
-
-            allTestimonials.forEach((testimonial, index) => {
+        if (testimonialContent1 && testimonialContent2) {
+            let cardsHtml = '';
+            testimonialData.forEach((testimonial) => {
                 const starSVG = `<svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`;
                 const starsHtml = Array(5).fill(starSVG).join('');
 
-                const cardHtml = `
-                    <div class="w-[300px] md:w-[400px] shrink-0 bg-white rounded-[24px] p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-100/80 transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden flex flex-col justify-between">
+                cardsHtml += `
+                    <div class="w-[300px] md:w-[400px] shrink-0 bg-white rounded-[24px] p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-100/80 transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden flex flex-col justify-between h-full">
                         <svg class="absolute -top-6 -right-6 w-36 h-36 text-blue-50 transform -scale-x-100 rotate-12 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
                         
                         <div class="relative z-10 mb-6 flex-grow">
                             <div class="flex gap-1 mb-6 text-yellow-500">
                                 ${starsHtml}
                             </div>
-                            <p class="text-gray-700 italic text-base md:text-[12px] leading-relaxed font-semibold">" ${testimonial.quote} "</p>
+                            <p class="text-gray-700 italic text-base md:text-[14px] leading-relaxed font-semibold">" ${testimonial.quote} "</p>
                         </div>
                         
-                        <div class="relative z-10 flex items-center gap-4 pt-6 border-t border-gray-100">
+                        <div class="relative z-10 flex items-center gap-4 pt-6 border-t border-gray-100 mt-auto">
                             <div class="relative w-14 h-14 rounded-full overflow-hidden p-[3px] bg-gradient-to-br from-accurate-blue to-[#00a8ff]">
                                 <div class="w-full h-full rounded-full overflow-hidden bg-white border-2 border-white">
                                     <img src="${testimonial.avatar}" alt="${testimonial.name}" class="w-full h-full object-cover">
@@ -2545,68 +2744,9 @@
                         </div>
                     </div>
                 `;
-                testimonialTrack.insertAdjacentHTML('beforeend', cardHtml);
             });
-
-            const testimonialCards = Array.from(testimonialTrack.children);
-            let isMobileTestimonial = window.innerWidth < 768;
-            let testimonialsPerPage = isMobileTestimonial ? 1 : 3;
-            let currentTestimonialPage = 0;
-            let totalTestimonialDots = Math.max(1, testimonialCards.length - testimonialsPerPage + 1);
-            let testimonialInterval;
-
-            function renderTestimonialDots() {
-                testimonialDotsContainer.innerHTML = '';
-                for (let i = 0; i < totalTestimonialDots; i++) {
-                    const dot = document.createElement('button');
-                    dot.className = i === currentTestimonialPage
-                        ? 'w-8 h-2.5 rounded-full bg-accurate-blue transition-all duration-300'
-                        : 'w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300 cursor-pointer';
-                    dot.addEventListener('click', () => {
-                        currentTestimonialPage = i;
-                        renderTestimonialDots();
-                        moveTestimonialSlider();
-                        resetTestimonialInterval();
-                    });
-                    testimonialDotsContainer.appendChild(dot);
-                }
-            }
-
-            function moveTestimonialSlider() {
-                const cardWidth = isMobileTestimonial ? 300 + 24 : 400 + 32;
-                const translateValue = currentTestimonialPage * cardWidth;
-                testimonialTrack.style.transform = `translateX(-${translateValue}px)`;
-            }
-
-            function autoSlideTestimonials() {
-                currentTestimonialPage = (currentTestimonialPage + 1) % totalTestimonialDots;
-                renderTestimonialDots();
-                moveTestimonialSlider();
-            }
-
-            function resetTestimonialInterval() {
-                clearInterval(testimonialInterval);
-                testimonialInterval = setInterval(autoSlideTestimonials, 4000);
-            }
-
-            window.addEventListener('resize', () => {
-                const wasMobile = isMobileTestimonial;
-                isMobileTestimonial = window.innerWidth < 768;
-                if (wasMobile !== isMobileTestimonial) {
-                    testimonialsPerPage = isMobileTestimonial ? 1 : 3;
-                    totalTestimonialDots = Math.max(1, testimonialCards.length - testimonialsPerPage + 1);
-                    currentTestimonialPage = 0;
-                    renderTestimonialDots();
-                    moveTestimonialSlider();
-                }
-            });
-
-            const tContainer = document.getElementById('testimonial-container');
-            tContainer.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
-            tContainer.addEventListener('mouseleave', resetTestimonialInterval);
-
-            renderTestimonialDots();
-            resetTestimonialInterval();
+            testimonialContent1.innerHTML = cardsHtml;
+            testimonialContent2.innerHTML = cardsHtml;
         }
     </script>
 
