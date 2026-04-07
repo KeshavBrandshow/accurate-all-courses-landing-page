@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -352,6 +352,12 @@
                                 </svg>
                                 Management
                             </span>
+                             <span class="discipline-bar">
+                                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Law
+                            </span>
                             <span class="discipline-bar">
                                 <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
@@ -365,12 +371,7 @@
                                 Pharmacy
                             </span>
                             <!-- <span class="discipline-bar">Architecture</span> -->
-                            <span class="discipline-bar">
-                                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Law
-                            </span>
+                          
                         </div>
                         <h2
                             class="text-3xl md:text-4xl lg:text-5xl font-bold text-accurate-yellow mt-2 mb-8 text-shadow-strong">
@@ -443,20 +444,55 @@
             </div>
             <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16  transition-all duration-500">
 
-                <img src="image/accreditations/naac.webp" alt="AICTE"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer" />
-                <img src="image/accreditations/aicte.webp" alt="AICTE"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer" />
-                <img src="image/accreditations/aktu.webp" alt="AICTE"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer" />
-                <img src="image/accreditations/pci.webp" alt="AICTE"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer" />
-                <img src="image/accreditations/bci.webp" alt="AICTE"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer" />
-                <img src="image/accreditations/bte.webp" alt="AICTE"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer" />
-                <img src="image/accreditations/ccsu.webp" alt="AICTE"
-                    class="h-16 md:h-20 object-contain hover:scale-110 transition-transform cursor-pointer" />
+                <!-- Accreditation Items -->
+                <div class="flex flex-col items-center group cursor-pointer text-center max-w-[150px]">
+                    <img src="image/accreditations/naac.webp" alt="NAAC"
+                        class="h-14 md:h-16 object-contain hover:scale-105 transition-transform duration-300 mb-4" />
+                    <h4 class="text-sm md:text-base font-bold text-accurate-blue uppercase tracking-wider">NAAC</h4>
+                    <p class="text-[9px] md:text-[10px] font-semibold text-gray-400 uppercase tracking-tight leading-tight mt-1">National Assessment & <br/> Accreditation Council</p>
+                </div>
+
+                <div class="flex flex-col items-center group cursor-pointer text-center max-w-[150px]">
+                    <img src="image/accreditations/aicte.webp" alt="AICTE"
+                        class="h-14 md:h-16 object-contain hover:scale-105 transition-transform duration-300 mb-4" />
+                    <h4 class="text-sm md:text-base font-bold text-accurate-blue uppercase tracking-wider">AICTE</h4>
+                    <p class="text-[9px] md:text-[10px] font-semibold text-gray-400 uppercase tracking-tight leading-tight mt-1">All India Council for <br/> Technical Education</p>
+                </div>
+
+                <div class="flex flex-col items-center group cursor-pointer text-center max-w-[150px]">
+                    <img src="image/accreditations/aktu.webp" alt="AKTU"
+                        class="h-14 md:h-16 object-contain hover:scale-105 transition-transform duration-300 mb-4" />
+                    <h4 class="text-sm md:text-base font-bold text-accurate-blue uppercase tracking-wider">AKTU</h4>
+                    <p class="text-[9px] md:text-[10px] font-semibold text-gray-400 uppercase tracking-tight leading-tight mt-1">Dr. A.P.J. Abdul Kalam <br/> Technical University</p>
+                </div>
+
+                <div class="flex flex-col items-center group cursor-pointer text-center max-w-[150px]">
+                    <img src="image/accreditations/pci.webp" alt="PCI"
+                        class="h-14 md:h-16 object-contain hover:scale-105 transition-transform duration-300 mb-4" />
+                    <h4 class="text-sm md:text-base font-bold text-accurate-blue uppercase tracking-wider">PCI</h4>
+                    <p class="text-[9px] md:text-[10px] font-semibold text-gray-400 uppercase tracking-tight leading-tight mt-1">Pharmacy Council <br/> of India</p>
+                </div>
+
+                <div class="flex flex-col items-center group cursor-pointer text-center max-w-[150px]">
+                    <img src="image/accreditations/bci.webp" alt="BCI"
+                        class="h-14 md:h-16 object-contain hover:scale-105 transition-transform duration-300 mb-4" />
+                    <h4 class="text-sm md:text-base font-bold text-accurate-blue uppercase tracking-wider">BCI</h4>
+                    <p class="text-[9px] md:text-[10px] font-semibold text-gray-400 uppercase tracking-tight leading-tight mt-1">Bar Council <br/> of India</p>
+                </div>
+
+                <div class="flex flex-col items-center group cursor-pointer text-center max-w-[150px]">
+                    <img src="image/accreditations/bte.webp" alt="BTE"
+                        class="h-14 md:h-16 object-contain hover:scale-105 transition-transform duration-300 mb-4" />
+                    <h4 class="text-sm md:text-base font-bold text-accurate-blue uppercase tracking-wider">BTE</h4>
+                    <p class="text-[9px] md:text-[10px] font-semibold text-gray-400 uppercase tracking-tight leading-tight mt-1">Board of Technical <br/> Education, UP</p>
+                </div>
+
+                <div class="flex flex-col items-center group cursor-pointer text-center max-w-[150px]">
+                    <img src="image/accreditations/ccsu.webp" alt="CCSU"
+                        class="h-14 md:h-16 object-contain hover:scale-105 transition-transform duration-300 mb-4" />
+                    <h4 class="text-sm md:text-base font-bold text-accurate-blue uppercase tracking-wider">CCSU</h4>
+                    <p class="text-[9px] md:text-[10px] font-semibold text-gray-400 uppercase tracking-tight leading-tight mt-1">Chaudhary Charan <br/> Singh University</p>
+                </div>
 
             </div>
 
@@ -615,7 +651,7 @@
                 </div>
                 <h2 class="text-3xl md:text-5xl font-black text-accurate-dark-blue uppercase tracking-tight">
                     Why <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-accurate-blue to-blue-600">Accurate?</span>
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-accurate-blue to-blue-600">Accurate</span>
                 </h2>
             </div>
 
@@ -2576,21 +2612,22 @@
                 { q: "What is the admission procedure?", a: "Admissions are strictly based on merit. We accept Score / Rank of national and state level entrance tests like JEE, CUET, / Any other applicable entrance test recognised by Govt. or Accurate Institute's own specific admission process depending on the chosen program." },
                 { q: "When do admissions open?", a: "Admissions generally open in the first quarter of the year. Students /parents are advised to visit our official website regularly for the latest deadlines and application forms." },
                 { q: "Can I apply for multiple programs?", a: "Yes, candidates can apply for multiple programs provided they meet the specific eligibility criteria and must have appeared for the required entrance exams." },
-                // { q: "What is campus life like at Accurate Institute?", a: "Campus life is diverse and vibrant with 40+ student-led clubs, annual cultural fests, extensive sports events, and continuous industry interactions to keep students engaged." },
-                // { q: "What placement opportunities does Accurate Institute offer?", a: "The university boasts a dedicated placement cell with stellar track records, offering placements in top MNCs and corporations globally with packages up to â‚¹1.37 CR PA." },
-                // { q: "Does Accurate Institute offer scholarships?", a: "Yes, we offer up to 100% scholarships based on academic merit, entrance exam scores, and outstanding sports achievements." },
-                // { q: "Which companies recruit from Accurate Institute?", a: "Top recruiters include Tata Power, KPMG, Goldman Sachs, Deloitte, Dell, Capgemini, TCS, Microsoft, Amazon, IBM, and many more industry leaders." },
-                // { q: "Does the university provide internship support?", a: "Yes, extensive internship support is provided through our industry partnerships, the career services center, and corporate collaborations." }
+                { q: "Does Accurate provide hostel facilities?", a: "Yes, we provide separate, well-furnished hostels for boys and girls with 24/7 security, nutritious meals, and Wi-Fi connectivity to ensure a comfortable stay." },
+                { q: "Is there any provision for scholarships?", a: "Yes, Accurate offers merit-based scholarships based on academic performance, entrance exam scores, and other achievements to support deserving students." }
             ],
             academics: [
                 { q: "What programs are offered at Accurate Institute?", a: "We offer multiple UG & PG programs across Engineering, Management, Law, Pharmacy, Commerce, computer Application." },
                 { q: "What is the student-to-faculty ratio?", a: "We maintain a highly favourable and low student-to-faculty ratio to ensure personalized attention, quality education, and dedicated mentoring process." },
-                { q: "Are the programs industry-aligned?", a: "Absolutely. Our curriculum is designed in collaboration with industry experts and corporate partners to ensure students learn highly relevant and in-demand future skills and make them industry ready." }
+                { q: "Are the programs industry-aligned?", a: "Absolutely. Our curriculum is designed in collaboration with industry experts and corporate partners to ensure students learn highly relevant and in-demand future skills and make them industry ready." },
+                { q: "What kind of industrial exposure can I expect?", a: "Students get extensive corporate exposure through regular industrial visits, guest lectures by industry veterans, corporate workshops, and live projects." },
+                { q: "Are there facilities for research and innovation?", a: "Yes, we have specialized research labs, a business incubation center, and we provide students with the resources and mentorship needed to pursue research and innovative ideas." }
             ],
             admission: [
                 { q: "How are you preparing your students to be Industry ready?", a: "Our learning ecosystem ensures students are not only trained for today's roles, butÂ prepared for tomorrow's technologies." },
                 { q: "What qualities do your students have which other college students lack?", a: "We prepare students not just to pass examinations, but toÂ perform, compete, and growÂ in dynamic professional environments." },
-                { q: "Is your college receptive to innovation, technology, science & entrepreneurship?", a: "Yes,Integrated exposure to emerging and high-demand domains such as Artificial Intelligence, Data Science, Cloud Computing, Automation, Digital Transformation, and other evolving technologies â€” ensuring graduates remain relevant in a rapidly changing world. Our Incubation centre helps students to become acquainted with entrepreneurship." }
+                { q: "Is your college receptive to innovation, technology, science & entrepreneurship?", a: "Yes,Integrated exposure to emerging and high-demand domains such as Artificial Intelligence, Data Science, Cloud Computing, Automation, Digital Transformation, and other evolving technologies â€” ensuring graduates remain relevant in a rapidly changing world. Our Incubation centre helps students to become acquainted with entrepreneurship." },
+                { q: "How do you assist with placements?", a: "Our dedicated Career Services Cell provides end-to-end support including resume building, mock interviews, soft-skills training, and connects students with 500+ top recruiting partners." },
+                { q: "What makes the campus environment unique?", a: "Our 17-acre lush green campus offers a blend of natural tranquility and modern infrastructure, including advanced computer labs, digital libraries, and extensive sports facilities for holistic development." }
             ]
         };
 
